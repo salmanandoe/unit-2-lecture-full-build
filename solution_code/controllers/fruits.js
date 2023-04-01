@@ -11,7 +11,8 @@ router.post('/', async (req, res) => {
 // Index
 router.get('/', async (req, res) => {
 	const fruits = await Fruit.find({});
-	res.send(fruits);
+	// res.send(fruits);
+	res.render("fruits/index.ejs", {fruits});
 });
 
 // Seed

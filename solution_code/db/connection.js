@@ -1,13 +1,8 @@
-
 // import mongoose
 const mongoose = require('mongoose')
 
-// database configuration 
-const DATABASE_URL =
-	'mongodb+srv://admin:9qXBcu7n9JccCqZ@cluster0.yxzesjt.mongodb.net/carina?retryWrites=true&w=majority';
-
 // mongoose connect to url
-mongoose.connect(DATABASE_URL)
+mongoose.connect(process.env.DATABASE_URL);
 
 mongoose.connection.on("connected", () => {
     console.log("Mongoose connected to mongoDB")
