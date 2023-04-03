@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 
 const fruitsController = require('./controllers/fruits');
 app.use('/fruits', fruitsController);
+// when you see anything with fruits, route it to the fruits controller. this allows you to not have to include /fruits before every new route.
 
 // Listener
 app.listen(process.env.PORT, () =>
